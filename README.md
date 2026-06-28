@@ -11,15 +11,12 @@ Conceptor Networks bridge the gap between subsymbolic neural activation trajecto
 
 Conceptors vary in how they characterize and constrain high-dimensional neural activation spaces (X), balancing computational performance against parameter footprint.
 
-*   **Matrix Conceptors (Traditional):** The foundational variant. An N × N matrix C computed from the network state correlation matrix \(R = E[XX^T]\).
-    *   *Mathematical Definition:* \(C = R(R + \alpha^{-2}I)^{-1}\), where α is the aperture (sensitivity scaling).
-    *   *Trade-off:* High performance and precise geometrical control, but storage costs scale quadratically (O(N²)) with the number of hidden layer neurons.
-*   **Diagonal Conceptors:** Simplifies matrix conceptors by treating all off-diagonal values as zero, reducing the operator to a scaling vector of length N.
-    *   *Trade-off:* Drastically lowers storage costs to O(N), but compromises the ability to capture directional cross-correlations in spatial representations.
-*   **Random Feature Conceptors (RFCs):** An expansion of diagonal conceptors that projects the original network states into a higher-dimensional random feature space before applying a diagonal filter.
-    *   *Trade-off:* Recovers a major portion of Matrix Conceptor performance while keeping compute lightweight.
-*   **PCA-Enhanced RFCs:** The latest architectural refinement utilizing Principal Component Analysis (PCA) to structure the projection before scaling.
-    *   *Trade-off:* Captures optimal variances across latent dimensions to maximize the expressive power of random projections.
+| Variant / Type | Year | First Paper | Mathematical Definition / Trade-offs |
+| :--- | :--- | :--- | :--- |
+| **Matrix Conceptors (Traditional)**<br>The foundational variant. An N × N matrix C computed from the network state correlation matrix \(R = E[XX^T]\). | 2014 | [Controlling Recurrent Neural Networks by Conceptors](https://arxiv.org/abs/1403.3369) | **Mathematical Definition:** \(C = R(R + \alpha^{-2}I)^{-1}\), where α is the aperture (sensitivity scaling).<br>**Trade-off:** High performance and precise geometrical control, but storage costs scale quadratically (O(N²)) with the number of hidden layer neurons. |
+| **Diagonal Conceptors**<br>Simplifies matrix conceptors by treating all off-diagonal values as zero, reducing the operator to a scaling vector of length N. | 2021 | [Controlling Recurrent Neural Networks by Diagonal Conceptors](https://arxiv.org/abs/2107.07968) | **Trade-off:** Drastically lowers storage costs to O(N), but compromises the ability to capture directional cross-correlations in spatial representations. |
+| **Random Feature Conceptors (RFCs)**<br>An expansion of diagonal conceptors that projects the original network states into a higher-dimensional random feature space before applying a diagonal filter. | 2017 | [Using Conceptors to Manage Neural Long-Term Memories for Temporal Patterns](https://www.jmlr.org/papers/v18/16-130.html) | **Trade-off:** Recovers a major portion of Matrix Conceptor performance while keeping compute lightweight. |
+| **PCA-Enhanced RFCs**<br>The latest architectural refinement utilizing Principal Component Analysis (PCA) to structure the projection before scaling. | 2025 | [Controlling Recurrent Neural Networks with Improved Feature Conceptors](https://fse.studenttheses.ub.rug.nl/id/eprint/34845) | **Trade-off:** Captures optimal variances across latent dimensions to maximize the expressive power of random projections. |
 
 ---
 
@@ -27,11 +24,11 @@ Conceptors vary in how they characterize and constrain high-dimensional neural a
 
 Extensions built on the mathematical properties of conceptors to address specialized training constraints and network topologies.
 
-*   **Semi-Supervised Conceptors:** Learns explicit concept bounds from partially labeled neural trajectories, isolating concepts even when background signals are highly chaotic.
-*   **Conceptor-Aided Backpropagation (CAB):** A variation of standard deep learning optimization where gradients are shielded by conceptors during backpropagation.
-    *   *Impact:* Acts as a spatial gate that explicitly prevents new task updates from overwriting gradients belonging to previously mastered tasks, mitigating catastrophic forgetting.
-*   **Conceptor Logic / Quasi-Boolean Logic:** A structural property enabling standard Boolean operators (`NOT`, `AND`, `OR`) to be executed directly on conceptor matrices.
-    *   *Impact:* If C is a conceptor for "Walking" and D is "Running", a new conceptor can be generated mathematically via \(C \vee D\) without retraining the neural network.
+| Framework / Algorithm | Year | First Paper | Key Concept & Impact |
+| :--- | :--- | :--- | :--- |
+| **Semi-Supervised Conceptors** | 2020 | [Semi-supervised Conceptors and Conceptor Logic](https://publishup.uni-potsdam.de/frontdoor/index/index/docId/48446) | Learns explicit concept bounds from partially labeled neural trajectories, isolating concepts even when background signals are highly chaotic. |
+| **Conceptor-Aided Backpropagation (CAB)** | 2018 | [Overcoming Catastrophic Interference using Conceptor-Aided Backpropagation](https://openreview.net/forum?id=B13njo1R-) | A variation of standard deep learning optimization where gradients are shielded by conceptors during backpropagation.<br>**Impact:** Acts as a spatial gate that explicitly prevents new task updates from overwriting gradients belonging to previously mastered tasks, mitigating catastrophic forgetting. |
+| **Conceptor Logic / Quasi-Boolean Logic** | 2014 | [Controlling Recurrent Neural Networks by Conceptors](https://arxiv.org/abs/1403.3369) | A structural property enabling standard Boolean operators (`NOT`, `AND`, `OR`) to be executed directly on conceptor matrices.<br>**Impact:** If C is a conceptor for "Walking" and D is "Running", a new conceptor can be generated mathematically via \(C \vee D\) without retraining the neural network. |
 
 ---
 
