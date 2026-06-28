@@ -1,7 +1,18 @@
-# Awesome-Conceptor-Networks
-## 🧠 The Conceptor Networks Map
+<div align="center">
+  <img src="assets/banner.svg" alt="Conceptor Networks Map Banner" width="100%" />
+</div>
 
-> **A comprehensive reference guide for Conceptor Networks—mapping their core mathematical types, adaptive variations, logical properties, and applications across RNNs and state-of-the-art Transformers.**
+<div align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Conceptor-Networks/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Conceptor-Networks?style=flat-square" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Conceptor-Networks/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Conceptor-Networks?style=flat-square" alt="Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Conceptor-Networks/issues"><img src="https://img.shields.io/github/issues/ishandutta2007/Awesome-Conceptor-Networks?style=flat-square" alt="Issues"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</div>
+
+# Awesome Conceptor Networks 🧠
+
+> **A comprehensive reference map for Conceptor Networks—detailing their core mathematical types, adaptive variations, logical properties, and applications across recurrent neural networks (RNNs), continual learning systems, and state-of-the-art Transformers.**
 
 Conceptor Networks bridge the gap between subsymbolic neural activation trajectories (high-dimensional vectors) and symbolic conceptual logic. By defining conceptors as soft-projection regularizers on neural state matrices, this architecture allows a single recurrent or feedforward network to learn, store, de-noise, and morph a vast repertoire of distinct temporal or static patterns without catastrophic interference.
 
